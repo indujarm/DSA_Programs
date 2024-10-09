@@ -1,0 +1,10 @@
+public class NumberOfdigit {
+    public static void main(String[] args) {
+        int num=12345;
+        System.out.println((int)(Math.log10(num))+1);
+    }
+}
+
+
+Output 
+  5
