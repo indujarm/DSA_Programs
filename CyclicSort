@@ -1,0 +1,32 @@
+import java.util.Arrays;
+
+public class CyclicSort {
+    public static void main(String[] args) {
+        int arr []= {6,4,2,1,5,3,0};
+        cyclic(arr);
+        System.out.println(Arrays.toString(arr));
+
+    }
+    static void cyclic(int []arr)
+    {
+        int n= arr.length;
+        int i=0;
+        while(i<n)
+        {
+            int crt = arr[i];
+            if(arr[i]!=arr[crt])
+            {
+                swap(arr,i,crt);
+            }
+            else {
+                i++;
+            }
+        }
+    }
+    static void swap(int []arr,int s,int e)
+    {
+        int temp = arr[s];
+        arr[s]=arr[e];
+        arr[e]=temp;
+    }
+}
