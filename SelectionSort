@@ -1,0 +1,36 @@
+import java.util.Arrays;
+
+public class SelectionSort {
+    public static void main(String[] args) {
+        int [] arr={6,5,4,3,2,1};
+        System.out.println(Arrays.toString(arr));
+
+    }
+    static void selection(int arr[])
+    {
+        int n=arr.length;
+
+        for(int i=0;i<n;i++)
+        {
+            int last=arr[n-i-1];
+            int max =getMax(arr,0,last);
+            swap(arr,last,max);
+        }
+    }
+    static void swap(int []arr,int s,int e)
+    {
+        int temp = arr[s];
+        arr[s]=arr[e];
+        arr[e]=temp;
+    }
+    static int  getMax(int []arr,int s, int e)
+    {
+        int max=Integer.MAX_VALUE;
+        for(int i =s;i<e;i++)
+        {
+            max=Math.max(max,arr[i]);
+        }
+        return max;
+
+    }
+}
